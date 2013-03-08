@@ -7,26 +7,72 @@
 //
 
 #import "JInjectorTests.h"
+#import "JInjector.h"
+
+@interface DummyService : NSObject <JInjectable>
+- (BOOL)works;
+@end
+@implementation DummyService
+{
+    BOOL _works;
+}
+- (void)awakeFromInitialization
+{
+    _works = YES;
+}
+- (BOOL)works
+{
+    return _works;
+}
+@end
+
+@interface DumberService : NSObject <JInjectable>
+@end
+@implementation DumberService
+@end
+
+@interface JInjector (PrivateMethods)
++ (NSMutableDictionary*)_objectCache;
+@end
 
 @implementation JInjectorTests
 
-- (void)setUp
+- (void)testCreatingInstance
 {
-    [super setUp];
-    
-    // Set-up code here.
+    DummyService* service = JInject(DummyService);
+    STAssertNotNil(service, @"Should not get back a nil instance from JInject()");
 }
 
-- (void)tearDown
+- (void)testCachingInstance
 {
-    // Tear-down code here.
-    
-    [super tearDown];
+    DummyService* service1 = JInject(DummyService);
+    DummyService* service2 = JInject(DummyService);
+    STAssertEqualObjects(service1, service2, @"Service 1 and service 2 should be the same object.");
+    STAssertTrue([[JInjector _objectCache] count] == 1, @"Should only have one instance");
 }
 
-- (void)testExample
+- (void)testAwakeFromInitialization
 {
-    STFail(@"Unit tests are not implemented yet in JInjectorTests");
+    DummyService* service = JInject(DummyService);
+    STAssertTrue([service works] == YES, @"Must call awakeFromInitialization");
+}
+
+- (void)testRemoveSpecificObject
+{
+    DummyService* service = JInject(DummyService);
+    [JInjector invalidateObject:service];
+    STAssertTrue([[JInjector _objectCache] count] == 0, @"Should be empty");
+}
+
+- (void)testRemoveAllObjects
+{
+    DummyService* service1 = JInject(DummyService);
+    DumberService* service2 = JInject(DumberService);
+    STAssertNotNil(service1, @"service1 shouldn't be nil");
+    STAssertNotNil(service2, @"service2 shouldn't be nil");
+    STAssertTrue([[JInjector _objectCache] count] == 2, @"Must have two instances");
+    [JInjector invalidateAllObjects];
+    STAssertTrue([[JInjector _objectCache] count] == 0, @"Cache should be empty");
 }
 
 @end

@@ -16,6 +16,11 @@
 		4EBAFA4216EA981F008F5BDB /* libJInjector.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EBAFA2916EA981F008F5BDB /* libJInjector.a */; };
 		4EBAFA4816EA981F008F5BDB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4EBAFA4616EA981F008F5BDB /* InfoPlist.strings */; };
 		4EBAFA4B16EA981F008F5BDB /* JInjectorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EBAFA4A16EA981F008F5BDB /* JInjectorTests.m */; };
+		4EBAFA5B16EA9DC7008F5BDB /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EBAFA5A16EA9DC7008F5BDB /* Cocoa.framework */; };
+		4EBAFA6D16EA9DD7008F5BDB /* JInjector.h in Headers */ = {isa = PBXBuildFile; fileRef = 4EBAFA3116EA981F008F5BDB /* JInjector.h */; };
+		4EBAFA6E16EA9DD7008F5BDB /* JInjector.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EBAFA3316EA981F008F5BDB /* JInjector.m */; };
+		4EBAFA6F16EA9DE6008F5BDB /* JInjectorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EBAFA4A16EA981F008F5BDB /* JInjectorTests.m */; };
+		4EBAFA9216EA9F38008F5BDB /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EBAFA3B16EA981F008F5BDB /* SenTestingKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +59,11 @@
 		4EBAFA4716EA981F008F5BDB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4EBAFA4916EA981F008F5BDB /* JInjectorTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JInjectorTests.h; sourceTree = "<group>"; };
 		4EBAFA4A16EA981F008F5BDB /* JInjectorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JInjectorTests.m; sourceTree = "<group>"; };
+		4EBAFA5916EA9DC7008F5BDB /* JInjector-OSX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "JInjector-OSX.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4EBAFA5A16EA9DC7008F5BDB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
+		4EBAFA5D16EA9DC8008F5BDB /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		4EBAFA5E16EA9DC8008F5BDB /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		4EBAFA5F16EA9DC8008F5BDB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +86,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4EBAFA5516EA9DC7008F5BDB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4EBAFA9216EA9F38008F5BDB /* SenTestingKit.framework in Frameworks */,
+				4EBAFA5B16EA9DC7008F5BDB /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -94,6 +113,7 @@
 			children = (
 				4EBAFA2916EA981F008F5BDB /* libJInjector.a */,
 				4EBAFA3A16EA981F008F5BDB /* JInjectorTests.octest */,
+				4EBAFA5916EA9DC7008F5BDB /* JInjector-OSX.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -104,6 +124,8 @@
 				4EBAFA2C16EA981F008F5BDB /* Foundation.framework */,
 				4EBAFA3B16EA981F008F5BDB /* SenTestingKit.framework */,
 				4EBAFA3D16EA981F008F5BDB /* UIKit.framework */,
+				4EBAFA5A16EA9DC7008F5BDB /* Cocoa.framework */,
+				4EBAFA5C16EA9DC8008F5BDB /* Other Frameworks */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -145,7 +167,28 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		4EBAFA5C16EA9DC8008F5BDB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4EBAFA5D16EA9DC8008F5BDB /* AppKit.framework */,
+				4EBAFA5E16EA9DC8008F5BDB /* CoreData.framework */,
+				4EBAFA5F16EA9DC8008F5BDB /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		4EBAFA5616EA9DC7008F5BDB /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4EBAFA6D16EA9DD7008F5BDB /* JInjector.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		4EBAFA2816EA981F008F5BDB /* JInjector */ = {
@@ -184,6 +227,24 @@
 			productReference = 4EBAFA3A16EA981F008F5BDB /* JInjectorTests.octest */;
 			productType = "com.apple.product-type.bundle";
 		};
+		4EBAFA5816EA9DC7008F5BDB /* JInjector-OSX */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4EBAFA6A16EA9DC8008F5BDB /* Build configuration list for PBXNativeTarget "JInjector-OSX" */;
+			buildPhases = (
+				4EBAFA5416EA9DC7008F5BDB /* Sources */,
+				4EBAFA5516EA9DC7008F5BDB /* Frameworks */,
+				4EBAFA5616EA9DC7008F5BDB /* Headers */,
+				4EBAFA5716EA9DC7008F5BDB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "JInjector-OSX";
+			productName = "JInjector-OSX";
+			productReference = 4EBAFA5916EA9DC7008F5BDB /* JInjector-OSX.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -207,6 +268,7 @@
 			targets = (
 				4EBAFA2816EA981F008F5BDB /* JInjector */,
 				4EBAFA3916EA981F008F5BDB /* JInjectorTests */,
+				4EBAFA5816EA9DC7008F5BDB /* JInjector-OSX */,
 			);
 		};
 /* End PBXProject section */
@@ -217,6 +279,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				4EBAFA4816EA981F008F5BDB /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4EBAFA5716EA9DC7008F5BDB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,6 +321,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				4EBAFA4B16EA981F008F5BDB /* JInjectorTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4EBAFA5416EA9DC7008F5BDB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4EBAFA6E16EA9DD7008F5BDB /* JInjector.m in Sources */,
+				4EBAFA6F16EA9DE6008F5BDB /* JInjectorTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -384,6 +462,55 @@
 			};
 			name = Release;
 		};
+		4EBAFA6B16EA9DC8008F5BDB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
+				);
+				FRAMEWORK_VERSION = A;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				INFOPLIST_FILE = "JInjector/JInjector-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Debug;
+		};
+		4EBAFA6C16EA9DC8008F5BDB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
+				);
+				FRAMEWORK_VERSION = A;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				INFOPLIST_FILE = "JInjector/JInjector-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -409,6 +536,14 @@
 			buildConfigurations = (
 				4EBAFA5216EA981F008F5BDB /* Debug */,
 				4EBAFA5316EA981F008F5BDB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		4EBAFA6A16EA9DC8008F5BDB /* Build configuration list for PBXNativeTarget "JInjector-OSX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4EBAFA6B16EA9DC8008F5BDB /* Debug */,
+				4EBAFA6C16EA9DC8008F5BDB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
