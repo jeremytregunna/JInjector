@@ -1,0 +1,418 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4EBAFA2D16EA981F008F5BDB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EBAFA2C16EA981F008F5BDB /* Foundation.framework */; };
+		4EBAFA3216EA981F008F5BDB /* JInjector.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4EBAFA3116EA981F008F5BDB /* JInjector.h */; };
+		4EBAFA3416EA981F008F5BDB /* JInjector.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EBAFA3316EA981F008F5BDB /* JInjector.m */; };
+		4EBAFA3C16EA981F008F5BDB /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EBAFA3B16EA981F008F5BDB /* SenTestingKit.framework */; };
+		4EBAFA3E16EA981F008F5BDB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EBAFA3D16EA981F008F5BDB /* UIKit.framework */; };
+		4EBAFA3F16EA981F008F5BDB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EBAFA2C16EA981F008F5BDB /* Foundation.framework */; };
+		4EBAFA4216EA981F008F5BDB /* libJInjector.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EBAFA2916EA981F008F5BDB /* libJInjector.a */; };
+		4EBAFA4816EA981F008F5BDB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4EBAFA4616EA981F008F5BDB /* InfoPlist.strings */; };
+		4EBAFA4B16EA981F008F5BDB /* JInjectorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EBAFA4A16EA981F008F5BDB /* JInjectorTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4EBAFA4016EA981F008F5BDB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4EBAFA2116EA981F008F5BDB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4EBAFA2816EA981F008F5BDB;
+			remoteInfo = JInjector;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		4EBAFA2716EA981F008F5BDB /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/${PRODUCT_NAME}";
+			dstSubfolderSpec = 16;
+			files = (
+				4EBAFA3216EA981F008F5BDB /* JInjector.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		4EBAFA2916EA981F008F5BDB /* libJInjector.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libJInjector.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		4EBAFA2C16EA981F008F5BDB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		4EBAFA3016EA981F008F5BDB /* JInjector-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JInjector-Prefix.pch"; sourceTree = "<group>"; };
+		4EBAFA3116EA981F008F5BDB /* JInjector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JInjector.h; sourceTree = "<group>"; };
+		4EBAFA3316EA981F008F5BDB /* JInjector.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JInjector.m; sourceTree = "<group>"; };
+		4EBAFA3A16EA981F008F5BDB /* JInjectorTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JInjectorTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4EBAFA3B16EA981F008F5BDB /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		4EBAFA3D16EA981F008F5BDB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		4EBAFA4516EA981F008F5BDB /* JInjectorTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "JInjectorTests-Info.plist"; sourceTree = "<group>"; };
+		4EBAFA4716EA981F008F5BDB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		4EBAFA4916EA981F008F5BDB /* JInjectorTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JInjectorTests.h; sourceTree = "<group>"; };
+		4EBAFA4A16EA981F008F5BDB /* JInjectorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JInjectorTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4EBAFA2616EA981F008F5BDB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4EBAFA2D16EA981F008F5BDB /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4EBAFA3616EA981F008F5BDB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4EBAFA3C16EA981F008F5BDB /* SenTestingKit.framework in Frameworks */,
+				4EBAFA3E16EA981F008F5BDB /* UIKit.framework in Frameworks */,
+				4EBAFA3F16EA981F008F5BDB /* Foundation.framework in Frameworks */,
+				4EBAFA4216EA981F008F5BDB /* libJInjector.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4EBAFA2016EA981F008F5BDB = {
+			isa = PBXGroup;
+			children = (
+				4EBAFA2E16EA981F008F5BDB /* JInjector */,
+				4EBAFA4316EA981F008F5BDB /* JInjectorTests */,
+				4EBAFA2B16EA981F008F5BDB /* Frameworks */,
+				4EBAFA2A16EA981F008F5BDB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4EBAFA2A16EA981F008F5BDB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4EBAFA2916EA981F008F5BDB /* libJInjector.a */,
+				4EBAFA3A16EA981F008F5BDB /* JInjectorTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4EBAFA2B16EA981F008F5BDB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4EBAFA2C16EA981F008F5BDB /* Foundation.framework */,
+				4EBAFA3B16EA981F008F5BDB /* SenTestingKit.framework */,
+				4EBAFA3D16EA981F008F5BDB /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4EBAFA2E16EA981F008F5BDB /* JInjector */ = {
+			isa = PBXGroup;
+			children = (
+				4EBAFA3116EA981F008F5BDB /* JInjector.h */,
+				4EBAFA3316EA981F008F5BDB /* JInjector.m */,
+				4EBAFA2F16EA981F008F5BDB /* Supporting Files */,
+			);
+			path = JInjector;
+			sourceTree = "<group>";
+		};
+		4EBAFA2F16EA981F008F5BDB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4EBAFA3016EA981F008F5BDB /* JInjector-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4EBAFA4316EA981F008F5BDB /* JInjectorTests */ = {
+			isa = PBXGroup;
+			children = (
+				4EBAFA4916EA981F008F5BDB /* JInjectorTests.h */,
+				4EBAFA4A16EA981F008F5BDB /* JInjectorTests.m */,
+				4EBAFA4416EA981F008F5BDB /* Supporting Files */,
+			);
+			path = JInjectorTests;
+			sourceTree = "<group>";
+		};
+		4EBAFA4416EA981F008F5BDB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4EBAFA4516EA981F008F5BDB /* JInjectorTests-Info.plist */,
+				4EBAFA4616EA981F008F5BDB /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4EBAFA2816EA981F008F5BDB /* JInjector */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4EBAFA4E16EA981F008F5BDB /* Build configuration list for PBXNativeTarget "JInjector" */;
+			buildPhases = (
+				4EBAFA2516EA981F008F5BDB /* Sources */,
+				4EBAFA2616EA981F008F5BDB /* Frameworks */,
+				4EBAFA2716EA981F008F5BDB /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JInjector;
+			productName = JInjector;
+			productReference = 4EBAFA2916EA981F008F5BDB /* libJInjector.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		4EBAFA3916EA981F008F5BDB /* JInjectorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4EBAFA5116EA981F008F5BDB /* Build configuration list for PBXNativeTarget "JInjectorTests" */;
+			buildPhases = (
+				4EBAFA3516EA981F008F5BDB /* Sources */,
+				4EBAFA3616EA981F008F5BDB /* Frameworks */,
+				4EBAFA3716EA981F008F5BDB /* Resources */,
+				4EBAFA3816EA981F008F5BDB /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4EBAFA4116EA981F008F5BDB /* PBXTargetDependency */,
+			);
+			name = JInjectorTests;
+			productName = JInjectorTests;
+			productReference = 4EBAFA3A16EA981F008F5BDB /* JInjectorTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4EBAFA2116EA981F008F5BDB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Jeremy Tregunna";
+			};
+			buildConfigurationList = 4EBAFA2416EA981F008F5BDB /* Build configuration list for PBXProject "JInjector" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 4EBAFA2016EA981F008F5BDB;
+			productRefGroup = 4EBAFA2A16EA981F008F5BDB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4EBAFA2816EA981F008F5BDB /* JInjector */,
+				4EBAFA3916EA981F008F5BDB /* JInjectorTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4EBAFA3716EA981F008F5BDB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4EBAFA4816EA981F008F5BDB /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4EBAFA3816EA981F008F5BDB /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4EBAFA2516EA981F008F5BDB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4EBAFA3416EA981F008F5BDB /* JInjector.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4EBAFA3516EA981F008F5BDB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4EBAFA4B16EA981F008F5BDB /* JInjectorTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4EBAFA4116EA981F008F5BDB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4EBAFA2816EA981F008F5BDB /* JInjector */;
+			targetProxy = 4EBAFA4016EA981F008F5BDB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		4EBAFA4616EA981F008F5BDB /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4EBAFA4716EA981F008F5BDB /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4EBAFA4C16EA981F008F5BDB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		4EBAFA4D16EA981F008F5BDB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4EBAFA4F16EA981F008F5BDB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/JInjector.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "JInjector/JInjector-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		4EBAFA5016EA981F008F5BDB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/JInjector.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "JInjector/JInjector-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		4EBAFA5216EA981F008F5BDB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "JInjector/JInjector-Prefix.pch";
+				INFOPLIST_FILE = "JInjectorTests/JInjectorTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		4EBAFA5316EA981F008F5BDB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "JInjector/JInjector-Prefix.pch";
+				INFOPLIST_FILE = "JInjectorTests/JInjectorTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4EBAFA2416EA981F008F5BDB /* Build configuration list for PBXProject "JInjector" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4EBAFA4C16EA981F008F5BDB /* Debug */,
+				4EBAFA4D16EA981F008F5BDB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4EBAFA4E16EA981F008F5BDB /* Build configuration list for PBXNativeTarget "JInjector" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4EBAFA4F16EA981F008F5BDB /* Debug */,
+				4EBAFA5016EA981F008F5BDB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		4EBAFA5116EA981F008F5BDB /* Build configuration list for PBXNativeTarget "JInjectorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4EBAFA5216EA981F008F5BDB /* Debug */,
+				4EBAFA5316EA981F008F5BDB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4EBAFA2116EA981F008F5BDB /* Project object */;
+}

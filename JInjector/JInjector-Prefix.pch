@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'JInjector' target in the 'JInjector' project
+//
+
+#ifdef __OBJC__
+    #import <Foundation/Foundation.h>
+#endif
