@@ -20,7 +20,6 @@
 		4EBAFA6D16EA9DD7008F5BDB /* JInjector.h in Headers */ = {isa = PBXBuildFile; fileRef = 4EBAFA3116EA981F008F5BDB /* JInjector.h */; };
 		4EBAFA6E16EA9DD7008F5BDB /* JInjector.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EBAFA3316EA981F008F5BDB /* JInjector.m */; };
 		4EBAFA6F16EA9DE6008F5BDB /* JInjectorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EBAFA4A16EA981F008F5BDB /* JInjectorTests.m */; };
-		4EBAFA9216EA9F38008F5BDB /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EBAFA3B16EA981F008F5BDB /* SenTestingKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,7 +89,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4EBAFA9216EA9F38008F5BDB /* SenTestingKit.framework in Frameworks */,
 				4EBAFA5B16EA9DC7008F5BDB /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
