@@ -9,6 +9,10 @@ This project uses Automatic Reference Counting (ARC), but does not use any weak 
 
 How you get this library into your build setup is your business. You can use git submodules, copy files, whatever you like. Should you choose to add our project file to your workspace, you can merely depend on the resulting library or framework product, and that should be all you need.
 
+## Usage
+
+Who needs a demo app? Look at the unit tests, they show you how to use it too.
+
 ## License
 
 The terms under which use and distribution of this library is governed may be found in the [LICENSE](https://github.com/jeremytregunna/JInjector/blob/master/LICENSE) file.

@@ -11,14 +11,27 @@
 @protocol JInjectable;
 
 /**
- * Returns an instance of a class.
+ * Returns the default injector
+ */
+#define JDEFAULT_INJECTOR [JInjector defaultInjector]
+
+/**
+ * Return an instance of a class from a specific injector.
  *
- * @param cls The class to create an instance of
+ * @param injector The injector to pull the instance from.
+ * @param cls The class to create an instance of.
  * @return An instance of the class.
  */
-#define JInject(cls) [JInjector objectForClass:[cls class]]
+#define JInject(injector, cls) [((injector) ?: JDEFAULT_INJECTOR) objectForClass:[cls class]]
 
 @interface JInjector : NSObject
+
+/**
+ * Returns the default injector.
+ *
+ * @return The default injector.
+ */
++ (instancetype)defaultInjector;
 
 /**
  * Ask the injector for the instance representing the class.
@@ -28,7 +41,7 @@
  * @param aClass The class to use as the lookup key
  * @return An instance of the class aClass.
  */
-+ (id)objectForClass:(Class)aClass;
+- (id)objectForClass:(Class)aClass;
 
 /**
  * Remove a specific instance from the injector.
@@ -37,16 +50,21 @@
  *
  * @param anObject The object to remove
  */
-+ (void)invalidateObject:(id<JInjectable>)anObject;
+- (void)invalidateObject:(id<JInjectable>)anObject;
 
 /**
  * Remove all instances of all classes from the injector.
  */
-+ (void)invalidateAllObjects;
+- (void)invalidateAllObjects;
 
 @end
 
 @protocol JInjectable <NSObject>
 @optional
+/**
+ * Perform any initialization that an instance may require.
+ *
+ * 
+ */
 - (void)awakeFromInitialization;
 @end

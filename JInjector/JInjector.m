@@ -8,48 +8,52 @@
 
 #import "JInjector.h"
 
-static NSMutableDictionary* objectCache = nil;
-
 @interface JInjector ()
-+ (NSMutableDictionary*)_objectCache;
+@property (nonatomic, strong) NSMutableDictionary* objectCache;
 @end
 
 @implementation JInjector
 
-+ (void)initialize
++ (instancetype)defaultInjector
 {
-    if(self == [JInjector class])
-        objectCache = [NSMutableDictionary dictionary];
+    static id shared = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        shared = [[self alloc] init];
+    });
+    return shared;
 }
 
-+ (id)objectForClass:(Class)aClass
+- (id)init
+{
+    if((self = [super init]))
+        self.objectCache = [NSMutableDictionary dictionary];
+    return self;
+}
+
+- (id)objectForClass:(Class)aClass
 {
     NSString* className = NSStringFromClass(aClass);
-    id<JInjectable> anObject = [objectCache objectForKey:className];
+    id<JInjectable> anObject = [self.objectCache objectForKey:className];
     if(anObject == nil)
     {
         anObject = [[aClass alloc] init];
         if([anObject respondsToSelector:@selector(awakeFromInitialization)])
             [anObject awakeFromInitialization];
-        [objectCache setObject:anObject forKey:className];
+        [self.objectCache setObject:anObject forKey:className];
     }
     
     return anObject;
 }
 
-+ (void)invalidateObject:(id<JInjectable>)anObject
+- (void)invalidateObject:(id<JInjectable>)anObject
 {
-    [objectCache removeObjectForKey:NSStringFromClass([anObject class])];
+    [self.objectCache removeObjectForKey:NSStringFromClass([anObject class])];
 }
 
-+ (void)invalidateAllObjects
+- (void)invalidateAllObjects
 {
-    [objectCache removeAllObjects];
-}
-
-+ (NSMutableDictionary*)_objectCache
-{
-    return objectCache;
+    [self.objectCache removeAllObjects];
 }
 
 @end
