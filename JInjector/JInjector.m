@@ -40,10 +40,15 @@
         anObject = [[aClass alloc] init];
         if([anObject respondsToSelector:@selector(awakeFromInitialization)])
             [anObject awakeFromInitialization];
-        [self.objectCache setObject:anObject forKey:className];
+        [self setObject:anObject forClass:aClass];
     }
     
     return anObject;
+}
+
+- (void)setObject:(id<JInjectable>)anObject forClass:(Class)aClass
+{
+    [self.objectCache setObject:anObject forKey:NSStringFromClass(aClass)];
 }
 
 - (void)invalidateObject:(id<JInjectable>)anObject

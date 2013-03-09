@@ -14,6 +14,7 @@
 @end
 @implementation DummyService
 {
+    @public
     BOOL _works;
 }
 - (void)awakeFromInitialization
@@ -43,12 +44,30 @@
     STAssertNotNil(service, @"Should not get back a nil instance from JInject()");
 }
 
+- (void)testSeparateInjectors
+{
+    JInjector* injector1 = [JInjector defaultInjector];
+    JInjector* injector2 = [[JInjector alloc] init];
+    DummyService* service1 = JInject(injector1, DummyService);
+    DummyService* service2 = JInject(injector2, DummyService);
+    STAssertFalse(injector1 == injector2, @"Injectors should be different instances");
+    STAssertFalse(service1 == service2, @"Should receive two different instances from two different injectors.");
+}
+
 - (void)testCachingInstance
 {
     DummyService* service1 = JInject(0, DummyService);
     DummyService* service2 = JInject(0, DummyService);
     STAssertEqualObjects(service1, service2, @"Service 1 and service 2 should be the same object.");
     STAssertTrue([[JInjector defaultInjector].objectCache count] == 1, @"Should only have one instance");
+}
+
+- (void)testExplicitCaching
+{
+    DummyService* service = [[DummyService alloc] init];
+    service->_works = NO;
+    [[JInjector defaultInjector] setObject:service forClass:[DummyService class]];
+    STAssertEqualObjects(service, JInject(0, DummyService), @"An explicitly supplied object must be the object returned");
 }
 
 - (void)testAwakeFromInitialization

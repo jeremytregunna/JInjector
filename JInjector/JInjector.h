@@ -44,6 +44,15 @@
 - (id)objectForClass:(Class)aClass;
 
 /**
+ * Caches an object into the injector for a given class.
+ *
+ * This method will overwrite any previous cached object.
+ * @param anObject The object to cache.
+ * @param aClass The class to associate the object with.
+ */
+- (void)setObject:(id<JInjectable>)anObject forClass:(Class)aClass;
+
+/**
  * Remove a specific instance from the injector.
  *
  * This method is useful if you have modified the state of some object and wish to get a fresh instance. First remove the object, and then ask for a new one.
