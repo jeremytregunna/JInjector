@@ -46,9 +46,19 @@
     return anObject;
 }
 
+- (id)objectForKeyedSubscript:(id)aKey
+{
+    return [self objectForClass:[aKey class]];
+}
+
 - (void)setObject:(id<JInjectable>)anObject forClass:(Class)aClass
 {
     [self.objectCache setObject:anObject forKey:NSStringFromClass(aClass)];
+}
+
+- (void)setObject:(id<JInjectable>)anObject forKeyedSubscript:(id)aKey
+{
+    [self setObject:anObject forClass:[aKey class]];
 }
 
 - (void)invalidateObject:(id<JInjectable>)anObject

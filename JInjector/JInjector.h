@@ -43,6 +43,8 @@
  */
 - (id)objectForClass:(Class)aClass;
 
+- (id)objectForKeyedSubscript:(id)aKey;
+
 /**
  * Caches an object into the injector for a given class.
  *
@@ -51,6 +53,8 @@
  * @param aClass The class to associate the object with.
  */
 - (void)setObject:(id<JInjectable>)anObject forClass:(Class)aClass;
+
+- (void)setObject:(id<JInjectable>)anObject forKeyedSubscript:(id)aKey;
 
 /**
  * Remove a specific instance from the injector.

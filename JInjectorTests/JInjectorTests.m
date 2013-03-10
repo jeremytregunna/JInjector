@@ -70,6 +70,24 @@
     STAssertEqualObjects(service, JInject(0, DummyService), @"An explicitly supplied object must be the object returned");
 }
 
+- (void)testCachingWithSubscripting
+{
+    JInjector* injector = [JInjector defaultInjector];
+    DummyService* service = [[DummyService alloc] init];
+    service->_works = NO;
+    injector[[DummyService class]] = service;
+    STAssertTrue([injector.objectCache count] == 1, @"Should have one instance");
+}
+
+- (void)testRetrievingWithSubscripting
+{
+    JInjector* injector = [JInjector defaultInjector];
+    DummyService* service = [[DummyService alloc] init];
+    service->_works = NO;
+    injector[[DummyService class]] = service;
+    STAssertEqualObjects(injector[[DummyService class]], service, @"Should be the same objects");
+}
+
 - (void)testAwakeFromInitialization
 {
     DummyService* service = JInject(0, DummyService);
