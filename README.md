@@ -11,7 +11,44 @@ How you get this library into your build setup is your business. You can use git
 
 ## Usage
 
-Who needs a demo app? Look at the unit tests, they show you how to use it too.
+Basically, there are two things you'll be most interested in: Injecting an instance into your classes, and supplying a pre-initialized instance for others to inject into their classes.
+
+To get an instance of a class, it's really simple:
+
+```objc
+Car* car = JInject(Car);
+```
+
+You'll most likely use `JInject()` to give some property an instance, but this instance will be shared throughout the injector. `JInject()` uses a default injector, though you can create others by calling `[[JInjector alloc] init]` as you would expect. Instances are not cached between injectors.
+
+To set a default value for a paritcular class, you can do something like this:
+
+```objc
+APIClient* client = [[APIClient alloc] initWithAccessToken:@"abcdef1234567890"];
+[[JInjector defaultInjector] setObject:client forClass:[APIClient class]];
+```
+
+Then subsequent calls to query an instance will return that particular instance, and not create a new one. Any call to `-[JInjector setObject:forClass:]` will replace any previous instance that had been cached in the injector.
+
+One thing worth mentioning, there's an optional protocol method on `JInjectable` (which your objects you want to be able to inject must conform to) which will be fired if JInjector has to create a new instance of your class. This method you can optionally implement has the signature:
+
+```objc
+- (void)awakeFromInitialization;
+```
+
+You will not be able to pass any parameters into this method, this is a limitation of our framework. In cases where you might, consider looking at the `APIClient` example above for a solution.
+
+Both of the operations above support object subscripting like you'd find with arrays and dictionaries in modern Objective-C. They work just like described above, but you can use them like this:
+
+```objc
+JInjector* injector = [JInjector defaultInjector];
+// Setting an object
+injector[[APIClient class]] = [[APIClient alloc] initWithAccessToken:@"abcdef1234567890"];
+// Getting an instance
+APIClient* client = injector[[APIClient class]];
+```
+
+Want a comprehensive example of how to use this library? Look at the unit tests, they show all cases.
 
 ## License
 

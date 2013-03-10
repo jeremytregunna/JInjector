@@ -11,18 +11,12 @@
 @protocol JInjectable;
 
 /**
- * Returns the default injector
- */
-#define JDEFAULT_INJECTOR [JInjector defaultInjector]
-
-/**
- * Return an instance of a class from a specific injector.
+ * Return an instance of a class from the default injector.
  *
- * @param injector The injector to pull the instance from.
  * @param cls The class to create an instance of.
  * @return An instance of the class.
  */
-#define JInject(injector, cls) [((injector) ?: JDEFAULT_INJECTOR) objectForClass:[cls class]]
+#define JInject(cls) [[JInjector defaultInjector] objectForClass:[cls class]]
 
 @interface JInjector : NSObject
 
@@ -43,6 +37,14 @@
  */
 - (id)objectForClass:(Class)aClass;
 
+/**
+ * Ask the injector for the instance representing the class.
+ *
+ * This method will optionally invoke an instance method awakeFromInitialization on your object, exactly once per instance after it has been allocated.
+ *
+ * @param aClass The class to use as the lookup key
+ * @return An instance of the class aClass.
+ */
 - (id)objectForKeyedSubscript:(id)aKey;
 
 /**
@@ -54,6 +56,13 @@
  */
 - (void)setObject:(id<JInjectable>)anObject forClass:(Class)aClass;
 
+/**
+ * Caches an object into the injector for a given class.
+ *
+ * This method will overwrite any previous cached object.
+ * @param anObject The object to cache.
+ * @param aClass The class to associate the object with.
+ */
 - (void)setObject:(id<JInjectable>)anObject forKeyedSubscript:(id)aKey;
 
 /**

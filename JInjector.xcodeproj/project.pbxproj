@@ -63,6 +63,8 @@
 		4EBAFA5D16EA9DC8008F5BDB /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		4EBAFA5E16EA9DC8008F5BDB /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		4EBAFA5F16EA9DC8008F5BDB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		4EFABD4E16ED3E4700F677C2 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = SOURCE_ROOT; };
+		4EFABD4F16ED3E4700F677C2 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.md; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +143,8 @@
 		4EBAFA2F16EA981F008F5BDB /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				4EFABD4E16ED3E4700F677C2 /* LICENSE */,
+				4EFABD4F16ED3E4700F677C2 /* README.md */,
 				4EBAFA3016EA981F008F5BDB /* JInjector-Prefix.pch */,
 			);
 			name = "Supporting Files";
@@ -528,6 +532,7 @@
 				4EBAFA5016EA981F008F5BDB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4EBAFA5116EA981F008F5BDB /* Build configuration list for PBXNativeTarget "JInjectorTests" */ = {
 			isa = XCConfigurationList;
@@ -536,6 +541,7 @@
 				4EBAFA5316EA981F008F5BDB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4EBAFA6A16EA9DC8008F5BDB /* Build configuration list for PBXNativeTarget "JInjector-OSX" */ = {
 			isa = XCConfigurationList;
@@ -544,6 +550,7 @@
 				4EBAFA6C16EA9DC8008F5BDB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
