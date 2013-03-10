@@ -50,6 +50,12 @@ APIClient* client = injector[[APIClient class]];
 
 Want a comprehensive example of how to use this library? Look at the unit tests, they show all cases.
 
+## Common Problems
+
+1. **I keep getting `nil` back from calls to `JInject()`. What gives?**
+
+You very likely have not made your class conform to `JInjectable`; this should resolve your problem. If not, [file a bug](https://github.com/jeremytregunna/JInjector/issues).
+
 ## License
 
 The terms under which use and distribution of this library is governed may be found in the [LICENSE](https://github.com/jeremytregunna/JInjector/blob/master/LICENSE) file.
