@@ -42,7 +42,7 @@
  *
  * This method will optionally invoke an instance method awakeFromInitialization on your object, exactly once per instance after it has been allocated.
  *
- * @param aClass The class to use as the lookup key
+ * @param aKey The class to use as the lookup key
  * @return An instance of the class aClass.
  */
 - (id)objectForKeyedSubscript:(id)aKey;
@@ -61,7 +61,7 @@
  *
  * This method will overwrite any previous cached object.
  * @param anObject The object to cache.
- * @param aClass The class to associate the object with.
+ * @param aKey The class to associate the object with.
  */
 - (void)setObject:(id<JInjectable>)anObject forKeyedSubscript:(id)aKey;
 
