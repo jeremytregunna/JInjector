@@ -40,7 +40,7 @@
 
 - (void)testCreatingInstance
 {
-    DummyService* service = JInject(0, DummyService);
+    DummyService* service = JInject(DummyService);
     STAssertNotNil(service, @"Should not get back a nil instance from JInject()");
 }
 
@@ -48,16 +48,16 @@
 {
     JInjector* injector1 = [JInjector defaultInjector];
     JInjector* injector2 = [[JInjector alloc] init];
-    DummyService* service1 = JInject(injector1, DummyService);
-    DummyService* service2 = JInject(injector2, DummyService);
+    DummyService* service1 = injector1[[DummyService class]];
+    DummyService* service2 = injector2[[DummyService class]];
     STAssertFalse(injector1 == injector2, @"Injectors should be different instances");
     STAssertFalse(service1 == service2, @"Should receive two different instances from two different injectors.");
 }
 
 - (void)testCachingInstance
 {
-    DummyService* service1 = JInject(0, DummyService);
-    DummyService* service2 = JInject(0, DummyService);
+    DummyService* service1 = JInject(DummyService);
+    DummyService* service2 = JInject(DummyService);
     STAssertEqualObjects(service1, service2, @"Service 1 and service 2 should be the same object.");
     STAssertTrue([[JInjector defaultInjector].objectCache count] == 1, @"Should only have one instance");
 }
@@ -67,7 +67,7 @@
     DummyService* service = [[DummyService alloc] init];
     service->_works = NO;
     [[JInjector defaultInjector] setObject:service forClass:[DummyService class]];
-    STAssertEqualObjects(service, JInject(0, DummyService), @"An explicitly supplied object must be the object returned");
+    STAssertEqualObjects(service, JInject(DummyService), @"An explicitly supplied object must be the object returned");
 }
 
 - (void)testCachingWithSubscripting
@@ -90,21 +90,21 @@
 
 - (void)testAwakeFromInitialization
 {
-    DummyService* service = JInject(0, DummyService);
+    DummyService* service = JInject(DummyService);
     STAssertTrue([service works] == YES, @"Must call awakeFromInitialization");
 }
 
 - (void)testRemoveSpecificObject
 {
-    DummyService* service = JInject(0, DummyService);
+    DummyService* service = JInject(DummyService);
     [[JInjector defaultInjector] invalidateObject:service];
     STAssertTrue([[JInjector defaultInjector].objectCache count] == 0, @"Should be empty");
 }
 
 - (void)testRemoveAllObjects
 {
-    DummyService* service1 = JInject(0, DummyService);
-    DumberService* service2 = JInject(0, DumberService);
+    DummyService* service1 = JInject(DummyService);
+    DumberService* service2 = JInject(DumberService);
     STAssertNotNil(service1, @"service1 shouldn't be nil");
     STAssertNotNil(service2, @"service2 shouldn't be nil");
     STAssertTrue([[JInjector defaultInjector].objectCache count] == 2, @"Must have two instances");
