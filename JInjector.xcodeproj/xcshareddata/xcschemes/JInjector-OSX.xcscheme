@@ -32,7 +32,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "4EBAFA3916EA981F008F5BDB"
+               BlueprintIdentifier = "4EB0618816F1240100423CD3"
                BuildableName = "JInjectorTests.octest"
                BlueprintName = "JInjectorTests"
                ReferencedContainer = "container:JInjector.xcodeproj">
