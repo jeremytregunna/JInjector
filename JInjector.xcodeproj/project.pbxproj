@@ -7,30 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4EB0618A16F1240100423CD3 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EBAFA3B16EA981F008F5BDB /* SenTestingKit.framework */; };
+		4EB0618B16F1240100423CD3 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EBAFA5A16EA9DC7008F5BDB /* Cocoa.framework */; };
+		4EB0619116F1240100423CD3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4EB0618F16F1240100423CD3 /* InfoPlist.strings */; };
+		4EB0619416F1240100423CD3 /* JInjectorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EB0619316F1240100423CD3 /* JInjectorTests.m */; };
+		4EB0619916F1244D00423CD3 /* JInjector.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EBAFA3316EA981F008F5BDB /* JInjector.m */; };
 		4EBAFA2D16EA981F008F5BDB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EBAFA2C16EA981F008F5BDB /* Foundation.framework */; };
 		4EBAFA3216EA981F008F5BDB /* JInjector.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4EBAFA3116EA981F008F5BDB /* JInjector.h */; };
 		4EBAFA3416EA981F008F5BDB /* JInjector.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EBAFA3316EA981F008F5BDB /* JInjector.m */; };
-		4EBAFA3C16EA981F008F5BDB /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EBAFA3B16EA981F008F5BDB /* SenTestingKit.framework */; };
-		4EBAFA3E16EA981F008F5BDB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EBAFA3D16EA981F008F5BDB /* UIKit.framework */; };
-		4EBAFA3F16EA981F008F5BDB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EBAFA2C16EA981F008F5BDB /* Foundation.framework */; };
-		4EBAFA4216EA981F008F5BDB /* libJInjector.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EBAFA2916EA981F008F5BDB /* libJInjector.a */; };
-		4EBAFA4816EA981F008F5BDB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4EBAFA4616EA981F008F5BDB /* InfoPlist.strings */; };
-		4EBAFA4B16EA981F008F5BDB /* JInjectorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EBAFA4A16EA981F008F5BDB /* JInjectorTests.m */; };
 		4EBAFA5B16EA9DC7008F5BDB /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EBAFA5A16EA9DC7008F5BDB /* Cocoa.framework */; };
 		4EBAFA6D16EA9DD7008F5BDB /* JInjector.h in Headers */ = {isa = PBXBuildFile; fileRef = 4EBAFA3116EA981F008F5BDB /* JInjector.h */; };
 		4EBAFA6E16EA9DD7008F5BDB /* JInjector.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EBAFA3316EA981F008F5BDB /* JInjector.m */; };
-		4EBAFA6F16EA9DE6008F5BDB /* JInjectorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EBAFA4A16EA981F008F5BDB /* JInjectorTests.m */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		4EBAFA4016EA981F008F5BDB /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4EBAFA2116EA981F008F5BDB /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 4EBAFA2816EA981F008F5BDB;
-			remoteInfo = JInjector;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		4EBAFA2716EA981F008F5BDB /* CopyFiles */ = {
@@ -46,12 +34,17 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4EB0618916F1240100423CD3 /* JInjectorTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JInjectorTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4EB0618E16F1240100423CD3 /* JInjectorTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "JInjectorTests-Info.plist"; sourceTree = "<group>"; };
+		4EB0619016F1240100423CD3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		4EB0619216F1240100423CD3 /* JInjectorTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JInjectorTests.h; sourceTree = "<group>"; };
+		4EB0619316F1240100423CD3 /* JInjectorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JInjectorTests.m; sourceTree = "<group>"; };
+		4EB0619516F1240100423CD3 /* JInjectorTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JInjectorTests-Prefix.pch"; sourceTree = "<group>"; };
 		4EBAFA2916EA981F008F5BDB /* libJInjector.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libJInjector.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EBAFA2C16EA981F008F5BDB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		4EBAFA3016EA981F008F5BDB /* JInjector-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JInjector-Prefix.pch"; sourceTree = "<group>"; };
 		4EBAFA3116EA981F008F5BDB /* JInjector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JInjector.h; sourceTree = "<group>"; };
 		4EBAFA3316EA981F008F5BDB /* JInjector.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JInjector.m; sourceTree = "<group>"; };
-		4EBAFA3A16EA981F008F5BDB /* JInjectorTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JInjectorTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EBAFA3B16EA981F008F5BDB /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		4EBAFA3D16EA981F008F5BDB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		4EBAFA4516EA981F008F5BDB /* JInjectorTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "JInjectorTests-Info.plist"; sourceTree = "<group>"; };
@@ -68,22 +61,20 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		4EB0618516F1240100423CD3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4EB0618A16F1240100423CD3 /* SenTestingKit.framework in Frameworks */,
+				4EB0618B16F1240100423CD3 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4EBAFA2616EA981F008F5BDB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				4EBAFA2D16EA981F008F5BDB /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4EBAFA3616EA981F008F5BDB /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4EBAFA3C16EA981F008F5BDB /* SenTestingKit.framework in Frameworks */,
-				4EBAFA3E16EA981F008F5BDB /* UIKit.framework in Frameworks */,
-				4EBAFA3F16EA981F008F5BDB /* Foundation.framework in Frameworks */,
-				4EBAFA4216EA981F008F5BDB /* libJInjector.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,11 +89,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4EB0618C16F1240100423CD3 /* JInjectorTests */ = {
+			isa = PBXGroup;
+			children = (
+				4EB0619216F1240100423CD3 /* JInjectorTests.h */,
+				4EB0619316F1240100423CD3 /* JInjectorTests.m */,
+				4EB0618D16F1240100423CD3 /* Supporting Files */,
+			);
+			path = JInjectorTests;
+			sourceTree = "<group>";
+		};
+		4EB0618D16F1240100423CD3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4EB0618E16F1240100423CD3 /* JInjectorTests-Info.plist */,
+				4EB0618F16F1240100423CD3 /* InfoPlist.strings */,
+				4EB0619516F1240100423CD3 /* JInjectorTests-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		4EBAFA2016EA981F008F5BDB = {
 			isa = PBXGroup;
 			children = (
 				4EBAFA2E16EA981F008F5BDB /* JInjector */,
 				4EBAFA4316EA981F008F5BDB /* JInjectorTests */,
+				4EB0618C16F1240100423CD3 /* JInjectorTests */,
 				4EBAFA2B16EA981F008F5BDB /* Frameworks */,
 				4EBAFA2A16EA981F008F5BDB /* Products */,
 			);
@@ -112,8 +124,8 @@
 			isa = PBXGroup;
 			children = (
 				4EBAFA2916EA981F008F5BDB /* libJInjector.a */,
-				4EBAFA3A16EA981F008F5BDB /* JInjectorTests.octest */,
 				4EBAFA5916EA9DC7008F5BDB /* JInjector-OSX.framework */,
+				4EB0618916F1240100423CD3 /* JInjectorTests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -193,6 +205,24 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		4EB0618816F1240100423CD3 /* JInjectorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4EB0619616F1240100423CD3 /* Build configuration list for PBXNativeTarget "JInjectorTests" */;
+			buildPhases = (
+				4EB0618416F1240100423CD3 /* Sources */,
+				4EB0618516F1240100423CD3 /* Frameworks */,
+				4EB0618616F1240100423CD3 /* Resources */,
+				4EB0618716F1240100423CD3 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JInjectorTests;
+			productName = JInjectorTests;
+			productReference = 4EB0618916F1240100423CD3 /* JInjectorTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
 		4EBAFA2816EA981F008F5BDB /* JInjector */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4EBAFA4E16EA981F008F5BDB /* Build configuration list for PBXNativeTarget "JInjector" */;
@@ -209,25 +239,6 @@
 			productName = JInjector;
 			productReference = 4EBAFA2916EA981F008F5BDB /* libJInjector.a */;
 			productType = "com.apple.product-type.library.static";
-		};
-		4EBAFA3916EA981F008F5BDB /* JInjectorTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 4EBAFA5116EA981F008F5BDB /* Build configuration list for PBXNativeTarget "JInjectorTests" */;
-			buildPhases = (
-				4EBAFA3516EA981F008F5BDB /* Sources */,
-				4EBAFA3616EA981F008F5BDB /* Frameworks */,
-				4EBAFA3716EA981F008F5BDB /* Resources */,
-				4EBAFA3816EA981F008F5BDB /* ShellScript */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				4EBAFA4116EA981F008F5BDB /* PBXTargetDependency */,
-			);
-			name = JInjectorTests;
-			productName = JInjectorTests;
-			productReference = 4EBAFA3A16EA981F008F5BDB /* JInjectorTests.octest */;
-			productType = "com.apple.product-type.bundle";
 		};
 		4EBAFA5816EA9DC7008F5BDB /* JInjector-OSX */ = {
 			isa = PBXNativeTarget;
@@ -269,18 +280,18 @@
 			projectRoot = "";
 			targets = (
 				4EBAFA2816EA981F008F5BDB /* JInjector */,
-				4EBAFA3916EA981F008F5BDB /* JInjectorTests */,
 				4EBAFA5816EA9DC7008F5BDB /* JInjector-OSX */,
+				4EB0618816F1240100423CD3 /* JInjectorTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		4EBAFA3716EA981F008F5BDB /* Resources */ = {
+		4EB0618616F1240100423CD3 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4EBAFA4816EA981F008F5BDB /* InfoPlist.strings in Resources */,
+				4EB0619116F1240100423CD3 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,7 +305,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		4EBAFA3816EA981F008F5BDB /* ShellScript */ = {
+		4EB0618716F1240100423CD3 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -310,6 +321,15 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		4EB0618416F1240100423CD3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4EB0619416F1240100423CD3 /* JInjectorTests.m in Sources */,
+				4EB0619916F1244D00423CD3 /* JInjector.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4EBAFA2516EA981F008F5BDB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -318,34 +338,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4EBAFA3516EA981F008F5BDB /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4EBAFA4B16EA981F008F5BDB /* JInjectorTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		4EBAFA5416EA9DC7008F5BDB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				4EBAFA6E16EA9DD7008F5BDB /* JInjector.m in Sources */,
-				4EBAFA6F16EA9DE6008F5BDB /* JInjectorTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		4EBAFA4116EA981F008F5BDB /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 4EBAFA2816EA981F008F5BDB /* JInjector */;
-			targetProxy = 4EBAFA4016EA981F008F5BDB /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin PBXVariantGroup section */
+		4EB0618F16F1240100423CD3 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4EB0619016F1240100423CD3 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 		4EBAFA4616EA981F008F5BDB /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -357,6 +368,43 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		4EB0619716F1240100423CD3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "JInjectorTests/JInjectorTests-Prefix.pch";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				INFOPLIST_FILE = "JInjectorTests/JInjectorTests-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		4EB0619816F1240100423CD3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "JInjectorTests/JInjectorTests-Prefix.pch";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				INFOPLIST_FILE = "JInjectorTests/JInjectorTests-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
 		4EBAFA4C16EA981F008F5BDB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -434,36 +482,6 @@
 			};
 			name = Release;
 		};
-		4EBAFA5216EA981F008F5BDB /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
-					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "JInjector/JInjector-Prefix.pch";
-				INFOPLIST_FILE = "JInjectorTests/JInjectorTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = octest;
-			};
-			name = Debug;
-		};
-		4EBAFA5316EA981F008F5BDB /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
-					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "JInjector/JInjector-Prefix.pch";
-				INFOPLIST_FILE = "JInjectorTests/JInjectorTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = octest;
-			};
-			name = Release;
-		};
 		4EBAFA6B16EA9DC8008F5BDB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -516,6 +534,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		4EB0619616F1240100423CD3 /* Build configuration list for PBXNativeTarget "JInjectorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4EB0619716F1240100423CD3 /* Debug */,
+				4EB0619816F1240100423CD3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		4EBAFA2416EA981F008F5BDB /* Build configuration list for PBXProject "JInjector" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -530,15 +556,6 @@
 			buildConfigurations = (
 				4EBAFA4F16EA981F008F5BDB /* Debug */,
 				4EBAFA5016EA981F008F5BDB /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		4EBAFA5116EA981F008F5BDB /* Build configuration list for PBXNativeTarget "JInjectorTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				4EBAFA5216EA981F008F5BDB /* Debug */,
-				4EBAFA5316EA981F008F5BDB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
