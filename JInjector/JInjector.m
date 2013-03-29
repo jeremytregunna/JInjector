@@ -38,9 +38,9 @@
     if(anObject == nil)
     {
         anObject = [[aClass alloc] init];
+        [self setObject:anObject forClass:aClass];
         if([anObject respondsToSelector:@selector(awakeFromInitialization)])
             [anObject awakeFromInitialization];
-        [self setObject:anObject forClass:aClass];
     }
     
     return anObject;
