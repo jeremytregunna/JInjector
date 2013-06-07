@@ -7,6 +7,7 @@
 //
 
 #import "JInjector.h"
+#import <objc/runtime.h>
 
 @interface JInjector ()
 @property (nonatomic, strong) NSMutableDictionary* objectCache;
@@ -37,10 +38,13 @@
     id<JInjectable> anObject = [self.objectCache objectForKey:className];
     if(anObject == nil)
     {
-        anObject = [[aClass alloc] init];
-        [self setObject:anObject forClass:aClass];
-        if([anObject respondsToSelector:@selector(awakeFromInitialization)])
-            [anObject awakeFromInitialization];
+        if(class_conformsToProtocol(aClass, @protocol(JInjectable)))
+        {
+            anObject = [[aClass alloc] init];
+            if([anObject respondsToSelector:@selector(awakeFromInitialization)])
+                [anObject awakeFromInitialization];
+            [self setObject:anObject forClass:aClass];
+        }
     }
     
     return anObject;
