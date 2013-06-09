@@ -9,6 +9,8 @@
 #import "JInjector.h"
 #import <objc/runtime.h>
 
+NSString* const JInjectorClassNotInjectableException = @"JInjectorClassNotInjectableException";
+
 @interface JInjector ()
 @property (nonatomic, strong) NSMutableDictionary* objectCache;
 @end
@@ -45,6 +47,8 @@
                 [anObject awakeFromInitialization];
             [self setObject:anObject forClass:aClass];
         }
+        else
+            @throw [NSException exceptionWithName:JInjectorClassNotInjectableException reason:NSLocalizedString(@"Class is not injectable", nil) userInfo:nil];
     }
     
     return anObject;

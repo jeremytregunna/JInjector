@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+extern NSString* const JInjectorClassNotInjectableException;
+
 @protocol JInjectable;
 
 /**
