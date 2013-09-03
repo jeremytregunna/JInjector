@@ -14,6 +14,7 @@ profile
 *.moved-aside
 
 .DS_Store
+Builds/*
 # OS X Finder
 # Xcode per-user config
 *.mode1
@@ -30,6 +31,3 @@ build/
 *~
 *.dat
 *.dep
-# Cocoapods
-.gitmodules
-xcodebuild.log

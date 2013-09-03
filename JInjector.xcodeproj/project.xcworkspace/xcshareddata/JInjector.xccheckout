@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>A630D6B5-8274-416B-98B2-BE569523E352</string>
+	<key>IDESourceControlProjectName</key>
+	<string>JInjector</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>B26BFF0F-67D5-4561-8F05-71A228AEFADD</key>
+		<string>https://github.com/jeremytregunna/JInjector.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>JInjector.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>B26BFF0F-67D5-4561-8F05-71A228AEFADD</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/jeremytregunna/JInjector.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>B26BFF0F-67D5-4561-8F05-71A228AEFADD</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>B26BFF0F-67D5-4561-8F05-71A228AEFADD</string>
+			<key>IDESourceControlWCCName</key>
+			<string>JInjector</string>
+		</dict>
+	</array>
+</dict>
+</plist>
