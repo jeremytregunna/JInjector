@@ -5,6 +5,8 @@ JInjector is an iOS and OS X dependency injection library. It is extremely light
 
 This project uses Automatic Reference Counting (ARC), but does not use any weak references. As such, it will be safe to run with iOS deployment targets as low as the minimum Xcode gives you these days, 4.3.3. It will work on any 4.x iOS release however. This will also work on OS X 10.7.0 and higher.
 
+[![Build Status](https://travis-ci.org/jeremytregunna/JInjector.png?branch=master)](https://travis-ci.org/jeremytregunna/JInjector)
+
 ## Installation
 
 How you get this library into your build setup is your business. You can use git submodules, copy files, whatever you like. Should you choose to add our project file to your workspace, you can merely depend on the resulting library or framework product, and that should be all you need.
